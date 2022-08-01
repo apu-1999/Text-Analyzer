@@ -30,9 +30,6 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
 
-  /*const countDistinctWords = () => {
-    
-  };*/
 
   const [text, setText] = useState('');
   

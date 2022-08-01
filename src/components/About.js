@@ -26,7 +26,7 @@ export default function About() {
         
     });
     
-    const [btnText, setBtnText] = useState("Enable Dark Mode");
+  const [btnText, setBtnText] = useState("Enable Dark Mode");
     
   return (
     <div className="container" style={myStyle}>
