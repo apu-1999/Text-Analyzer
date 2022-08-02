@@ -37,12 +37,13 @@ export default function TextForm(props) {
   return (
     <>
       <div className="container">
-        <h1>{props.heading}</h1>
+        <h1 style={{color: props.mode==='light' ? 'black' : 'white'}}>{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
             value={text}
             onChange={handleOnChange}
+            style={{backgroundColor: props.mode==='light' ? 'white' : 'grey' ,  color: props.mode==='light' ? 'black' : 'white'}}
             id="myBox"
             rows="8"
           ></textarea>
@@ -60,13 +61,13 @@ export default function TextForm(props) {
           Copy Text
         </button>
       </div>
-      <div className="container my-3">
+      <div className="container my-3" style={{color: props.mode==='light' ? 'black' : 'white'}}>
         <h2>Your Text Summary</h2>
         <p>{text.length} characters , {text === ''  ? 0 : text.split(" ").length} words  and {text === '' ? 0 : text.split(".").length-1} sentences</p>
         <p>{0.008 * (text === ''  ? 0 : text.split(" ").length)} Minutes Read</p>
         <p>{text === '' ? 0 : new Set(text.split(" ")).size} distinct words</p>
         <h3>Preview</h3>
-        <p>{text}</p>
+        <p>{text.length>0 ? text : "Enter something in the textbox above to preview it here!"}</p>
       </div>
     </>
   );
