@@ -14,19 +14,19 @@ export default function About() {
             border : '1px solid white'
         });
 
-        btnText === "Enable Dark Mode" ? setBtnText("Enable Light Mode") : setBtnText("Enable Dark Mode");
-        btnText === "Enable Light Mode" ? setBtnText("Enable Dark Mode") : setBtnText("Enable Light Mode");
+        btnText === "Enable dark Mode" ? setBtnText("Enable Light Mode") : setBtnText("Enable dark Mode");
+        btnText === "Enable Light Mode" ? setBtnText("Enable dark Mode") : setBtnText("Enable Light Mode");
     }
 
     
 
     const [myStyle, setMyStyle] = useState({
-        color : 'white',
-        backgroundColor: 'black'
+        color : 'black',
+        backgroundColor: 'white'
         
     });
     
-  const [btnText, setBtnText] = useState("Enable Dark Mode");
+  const [btnText, setBtnText] = useState("Enable dark Mode");
     
   return (
     <div className="container" style={myStyle}>
